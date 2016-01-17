@@ -7,7 +7,7 @@ template <typename T>
 void sort(T *raw, int length)
 {
     int i, key;
-    for(int j = 0; j < length; j++){
+    for(int j = 1; j < length; j++){
         key = raw[j];
         i = j - 1;
         while(i >= 0 && raw[i] > key){
