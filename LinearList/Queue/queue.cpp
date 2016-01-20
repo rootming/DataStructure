@@ -1,5 +1,4 @@
 #include <iostream>
-
 using namespace std;
 
 class Queue
@@ -8,6 +7,10 @@ class Queue
         Queue(int size)
         { 
             initQueue(size);
+        }
+        virtual ~Queue()
+        {
+            delete []data;
         }
         void initQueue(int size)
         {
@@ -28,7 +31,7 @@ class Queue
             }
 
         }
-        int deQueue()
+        int deQueue(void)
         {
             int tmp;
             if(isEmpty()){
