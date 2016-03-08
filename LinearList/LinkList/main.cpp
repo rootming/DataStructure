@@ -41,13 +41,41 @@ void DisplayList(Node *head)
     }
 }
 
+Node *Queue(Node *head, int value)
+{
+    Node *tmp;
+    tmp = head;
+    while((head = head->next) != NULL){
+        if(head->data ==  value)
+            return head;
+    }
+    return NULL;
+}
+
+int GetLength(Node *head)
+{
+    Node *tmp;
+    tmp = head;
+    int count = 0;
+    while((head = head->next) != NULL)
+        count++;
+    return count;
+}
+
+
 int main()
 {
     int test[] = { 1, 2, 3, 4, 5};
     int test2[] = { 1, 2, 3, 4, 5};
     Node List, List2;
+    Node *tmp;
     CreatListHead(&List, test, 5);
     CreatListTail(&List2, test2, 5);
     DisplayList(&List);
     DisplayList(&List2);
+    if((tmp = Queue(&List, 5)) != NULL)
+        cout << "Found node\n";
+    else 
+        cout << "Not Found node\n";
+    return 0;
 }
