@@ -141,7 +141,7 @@ int main()
 {
     set_mark();
     mid_to_after(test_expr, strlen(test_expr));
-	getch();
+	getchar();
     return 0;
 } 
 
