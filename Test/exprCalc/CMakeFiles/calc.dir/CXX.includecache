@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/rootmingbirds/git/DataStructure/LinearList/Stack/exprCalc/expr.cpp
+string
+-
+cstdlib
+-
+expr.h
+/home/rootmingbirds/git/DataStructure/LinearList/Stack/exprCalc/expr.h
+
+/home/rootmingbirds/git/DataStructure/LinearList/Stack/exprCalc/expr.h
+string
+-
+map
+-
+unit.h
+/home/rootmingbirds/git/DataStructure/LinearList/Stack/exprCalc/unit.h
+stack.h
+/home/rootmingbirds/git/DataStructure/LinearList/Stack/exprCalc/stack.h
+
+/home/rootmingbirds/git/DataStructure/LinearList/Stack/exprCalc/stack.h
+iostream
+-
+vector
+-
+
+/home/rootmingbirds/git/DataStructure/LinearList/Stack/exprCalc/unit.h
+iostream
+-
+
