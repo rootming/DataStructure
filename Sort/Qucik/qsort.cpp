@@ -42,4 +42,4 @@ int main(void)
         cout << it << endl;
 
     return 0;
-}
+

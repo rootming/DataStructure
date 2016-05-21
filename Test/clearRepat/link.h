@@ -1,3 +1,4 @@
+//rootming@live.cn
 #ifndef __LINK_H__
 #define __LINK_H__
 #include <iostream>

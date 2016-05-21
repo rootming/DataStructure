@@ -1,3 +1,4 @@
+//rootming@live.cn
 #include <string>
 #include <map>
 #include "link.h"
@@ -17,10 +18,10 @@ class EXList: public Link<T>
             auto tmp = this->head;
             map <T, int> nodeStore;
 
-                while (tmp != nullptr) {
-                    nodeStore[tmp->data]++;
-                    tmp = tmp->next;
-                }
+            while (tmp != nullptr) {
+                nodeStore[tmp->data]++;
+                tmp = tmp->next;
+            }
             this->eraseList();
             for (auto it = nodeStore.begin(); it != nodeStore.end(); ++it)
                 cout << "Note: node value: " << it->first << " times: " << it->second << endl;

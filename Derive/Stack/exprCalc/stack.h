@@ -5,19 +5,6 @@
 
 using namespace std;
 //template <typename T>
-struct Unit
-{
-    enum UNITTYPE { NUMBER = 0, SYMBOL };
-    UNITTYPE type;
-    string strraw;
-    int value;
-    int weight;
-    Unit()
-    {
-        weight = -1;
-    }
-};
-
 template <typename T>
 class Stack
 {

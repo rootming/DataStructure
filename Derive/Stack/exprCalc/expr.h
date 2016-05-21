@@ -2,6 +2,7 @@
 #define __EXPR_H__
 #include <string>
 #include <map>
+#include "unit.h"
 #include "stack.h"
 
 
@@ -13,9 +14,9 @@ class Expr
         void initExpr(const string &expr);
         //void clearExpr(void);
         void midToAfter(void);
-        int calcExpr(void);
         void print(void);
         void printMore(void);
+        int calcExpr(void);
     private:
         bool inited;
         bool transLated;
