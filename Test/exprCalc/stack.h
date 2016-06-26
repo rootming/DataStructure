@@ -14,7 +14,7 @@ class Stack
             pos = -1;
         }
 
-        bool push(T &input)
+        bool push(T input)
         {
             store.push_back(input);
             pos++;

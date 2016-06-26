@@ -1,18 +1,19 @@
 #include <iostream>
+#include <stack>
 
 using namespace std;
 
-struct Tree
+struct Node 
 {
-    Tree()
+    Node()
     {
         leftChild = NULL;
         rightChild = NULL;
         cout << "Add node\n";
     }
-    Tree *leftChild;
-    Tree *rightChild;
-    int data;
+    Node *leftChild;
+    Node *rightChild;
+    char data;
 };
 
 
@@ -22,56 +23,88 @@ class BinaryTree
         enum TYPE {FIRST, NOTFIRST};
         BinaryTree()
         {
-            point = new Tree();
+            point = new Node();
         }
 
-        Tree *creatTree(BinaryTree::TYPE isFirst = NOTFIRST)
+        Node *creatTree(BinaryTree::TYPE isFirst = NOTFIRST)
         {
-            int temp;
             char option;
-            Tree *tp;
+            Node *tp;
             if(isFirst == FIRST)
-                tp = point;
+                tp = point;        
             else 
-                tp = new Tree();
+                tp = new Node();
+
+            cout << "Input value:\n";
+            cin >> tp->data;    
             cout << "Add child ? Y or N\n";
             cin >> option;
             if(option == 'Y'){
-                cout << "Input value:\n";
-                cin >> temp;
-                tp->data = temp;
                 tp->leftChild = creatTree();
                 tp->rightChild = creatTree();
-
-            }
-            else{
-                delete tp;
-                tp = NULL;
             }
             return tp;
         }
-        void printTree(void)
-        {
-            frontPrintTree(point);
-        }
 
-
-    private:
-        Tree *point;
-        void frontPrintTree(Tree *first)
+        /*
+        void frontPrintTree(Node *first)
         {
             if(first != NULL){
-                frontPrintTree(first->leftChild);
                 cout << first->data << " ";
+                frontPrintTree(first->leftChild);             
                 frontPrintTree(first->rightChild);
             }
         }
-};
+        */
+        void frontPrintTree(Node *first)
+        {
+            stack<Node *> store;
+            store.push(first);
+            while(store.size() == 0){
+                if(store.top().leftChild == NULL){
+                    cout << 
+                }
+            }
+        }
 
+        void midPrintTree(Node *first)
+        {
+            if(first != NULL){
+                midPrintTree(first->leftChild);
+                cout << first->data << " ";
+                midPrintTree(first->rightChild);
+            }
+        }
+
+        void lastPrintTree(Node *first)
+        {
+            if(first != NULL){ 
+                lastPrintTree(first->rightChild);
+                lastPrintTree(first->leftChild);
+                cout << first->data << " ";
+            }
+        }
+
+        void printTree()
+        {
+            cout << "前序遍历:\n";
+            frontPrintTree(point);
+            cout << "\n";
+            cout << "中序遍历:\n";       
+            midPrintTree(point);
+            cout << "\n";
+            cout << "后序遍历:\n";
+            lastPrintTree(point);
+            cout << "\n";
+        }
+
+    private:
+        Node *point; 
+}; 
 int main(void)
-{
-    BinaryTree test;
-    test.creatTree(BinaryTree::FIRST);
-    test.printTree();
-    return 0;
+{ 
+    BinaryTree test; 
+    test.creatTree(BinaryTree::FIRST); 
+    test.printTree(); 
+    return 0; 
 }
