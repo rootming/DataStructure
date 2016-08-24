@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++11    CMakeFiles/clearRepat.dir/main.cpp.o  -o clearRepat -rdynamic 

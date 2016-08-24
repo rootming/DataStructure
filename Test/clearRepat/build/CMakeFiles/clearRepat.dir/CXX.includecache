@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/rootmingbirds/git/DataStructure/LinearList/LinkList/clearRepat/link.h
+iostream
+-
+
+/home/rootmingbirds/git/DataStructure/LinearList/LinkList/clearRepat/main.cpp
+string
+-
+map
+-
+link.h
+/home/rootmingbirds/git/DataStructure/LinearList/LinkList/clearRepat/link.h
+

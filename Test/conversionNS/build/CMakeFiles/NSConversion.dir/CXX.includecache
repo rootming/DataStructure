@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/rootmingbirds/git/DataStructure/Test/conversionNS/main.cpp
+../exprCalc/stack.h
+/home/rootmingbirds/git/DataStructure/Test/exprCalc/stack.h
+iostream
+-
+
+/home/rootmingbirds/git/DataStructure/Test/exprCalc/stack.h
+iostream
+-
+vector
+-
+

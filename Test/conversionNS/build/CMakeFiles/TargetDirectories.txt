@@ -1,0 +1,1 @@
+/home/rootmingbirds/git/DataStructure/Test/conversionNS/build/CMakeFiles/NSConversion.dir
